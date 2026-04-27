@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup - AI Real Estate</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            font-family: Arial;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        body::before, body::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            animation: float 6s infinite ease-in-out;
+        }
+
+        body::before {
+            width: 250px;
+            height: 250px;
+            top: 15%;
+            left: 15%;
+        }
+
+        body::after {
+            width: 180px;
+            height: 180px;
+            bottom: 10%;
+            right: 10%;
+            animation-duration: 7s;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-25px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .card {
+            background: rgba(0,0,0,0.5);
+            padding: 40px;
+            border-radius: 15px;
+            width: 350px;
+            text-align: center;
+            animation: floatCard 3s infinite ease-in-out;
+            z-index: 2;
+        }
+
+        @keyframes floatCard {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+        }
+
+        button {
+            width: 95%;
+            padding: 12px;
+            background: #ff7e5f;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #feb47b;
+        }
+
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+
+        .credit {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>📝 Create Account</h2>
+
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Signup</button>
+    </form>
+
+    <p>Already have account? <a href="/login">Login</a></p>
+
+    <div class="credit">
+        Developed by <b>Yuvraj Aryan</b><br>
+        Reg No: 22105127039
+    </div>
+</div>
+
+</body>
+</html>
